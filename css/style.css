@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Karla;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--Light-Gray);
+}
+
+main {
+    width: 70%;
+    max-height: 80%;
+    min-height: 500px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+
+.col-wrapper {
+    display: grid;
+    width: 70%;
+    min-height: 80%;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.col-1 {
+    background-color: white;
+    display: grid;
+    padding: 40px 30px;
+    gap: 10px;
+}
+
+.col-1 {
+    grid-column: span 2;
+}
+
+.col-1 h2 {
+    color: var(--Cyan);
+    letter-spacing: -1px;
+}
+
+.col-1 h3 {
+    color: var(--Bright-Yellow);
+}
+
+.col-1 p {
+    font-size: 16px;
+    width: 90%;
+    color: var(--Grayish-Blue);
+}
+
+.col-2 {
+    background-color: var(--Cyan);
+    padding: 35px;
+    display: grid;
+}
+
+.col-2 div {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: 60px;
+}
+
+.col-2 p {
+    color: var(--Light-Gray);
+    font-size: 16px;
+}
+
+.col-2 div div {
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.col-2 button {
+    background-color: var(--Bright-Yellow);
+    border: none;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 15px 20px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.col-2 h3 {
+    color: white;
+}
+
+.col-3 {
+    background-color: hsl(179, 47%, 52%);
+    padding: 35px;
+}
+
+.col-3 h4 {
+    color: white;
+}
+
+.col-3 ul {
+    margin-top: 20px;
+}
+
+.col-3 ul li {
+    color: var(--Light-Gray);
+    font-size: 16px;
+    width: 80%;
+    text-align: left;
+    list-style: none;
+    font-size: 16px;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+@media (max-width:900px) {
+    main {
+        width: 100%;
+        margin: 100px 0px;
+    }
+
+    .col-wrapper {
+        grid-auto-flow: row;
+    }
+
+    .col-1 {
+        grid-row: 1;
+    }
+
+    .col-2 {
+        grid-row: 2;
+        grid-column: span 2;
+    }
+
+    .col-2 button {
+        padding: 15px;
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .col-3 {
+        grid-row: 3;
+        grid-column: span 2;
+    }
+}
+
+@media (max-width:1000px) {
+    body{
+        background-color: red;
+    }
+    main{
+        width: 100%;
+    }
+    .col-wrapper {
+        width: 80%;
+    }
+}
